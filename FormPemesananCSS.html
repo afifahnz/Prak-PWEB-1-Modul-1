@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Pemesanan</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 1;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+            h1 {
+                text-align: left;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            td {
+                padding: 10px;
+            }
+            input[type="text"],
+            input[type="number"],
+            input[type="date"],
+            select,
+            textarea {
+                width: 100%;
+                padding: 8px;
+                margin: 4px 0;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+            input[type="checkbox"] {
+                margin-top: 12px;
+            }
+            .buttons {
+                text-align: right;
+            }
+            .buttons input {
+                padding: 10px 20px;
+                margin: 5px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .buttons input[type="submit"] {
+                background-color: #007bff;
+                color: white;
+            }
+            .buttons input[type="reset"] {
+                background-color: #ffc107;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Form Pemesanan</h1>
+        <form>
+            <table>
+                <tr>
+                    <td>Id Pemesan:</td>
+                    <td><input type="number" name="id_pemesan" ></td>
+                </tr>
+                <tr>
+                    <td>Nama Pemesan:</td>
+                    <td><input type="text" name="nama_pemesan"></td>
+                </tr>
+                <tr>
+                    <td>Nomor Identitas:</td>
+                    <td><input type="number" name="nomor_identitas"></td>
+                </tr>
+                <tr>
+                    <td>Tipe Kamar:</td>
+                    <td>
+                        <select name="tipe_kamar">
+                            <option value="">--Pilih--</option>
+                            <option value="standar">STANDAR</option>
+                            <option value="deluxe">DELUXE</option>
+                            <option value="family">FAMILY</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Harga:</td>
+                    <td><input type="text" name="harga" readonly></td>
+                </tr>
+                <tr>
+                    <td>Tanggal Pesan:</td>
+                    <td><input type="date" name="tanggal_pesan"></td>
+                </tr>
+                <tr>
+                    <td>Durasi Menginap:</td>
+                    <td><input type="number" name="durasi_menginap">Hari</td>
+                </tr>
+                <tr>
+                    <td>Termasuk Breakfast:</td>
+                    <td><input type="checkbox" name="termasuk_breakfast"> Ya</td>
+                </tr>
+                <tr>
+                    <td>Total Bayar:</td>
+                    <td><input type="text" name="total_bayar" readonly></td>
+                </tr>
+                <tr class="buttons">
+                    <td colspan="2" align = "center">
+                        <input type="submit" value="Simpan">
+                        <input type="reset" value="Batal">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
